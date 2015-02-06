@@ -3,6 +3,7 @@
 if [[ $EUID -ne 0 ]]; then
   SUDO=sudo
 fi
+
 $SUDO mkdir -p /data/postgresql
 
 $SUDO docker run -d --name postgres    -p 5432:5432  -v /data/postgresql:/var/lib/postgresql/data postgres
