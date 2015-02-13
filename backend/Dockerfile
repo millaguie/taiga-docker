@@ -3,7 +3,7 @@ FROM python:3
 MAINTAINER Ivan Pedrazas "ipedrazas@gmail.com"
 RUN apt-get -qq update
 
-RUN apt-get install -y python-dev python-setuptools git-core locales
+RUN apt-get install -y python-dev python-setuptools git-core locales postgresql-client
 
 RUN echo "LANG=en_US.UTF-8" > /etc/default/locale
 RUN echo "LC_MESSAGES=POSIX" >> /etc/default/locale
